@@ -1,0 +1,36 @@
+.header{
+  text-align: center;
+  margin-bottom: var(--space-8);
+
+  h1{
+    font-size: var(--text-3xl);
+    font-family: var(--header-font), serif;
+    margin-bottom: var(--space-4);
+  }
+
+  p{
+    color: var(--color-text);
+    font-size: var(--text-lg);
+    font-family: var(--main-font), serif;
+    margin-bottom: var(--space-4);
+  }
+
+}
+
+.projects{
+  display: flex;
+  justify-content: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.back{
+  position: absolute;
+  font-size: var(--text-lg);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}

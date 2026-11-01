@@ -1,0 +1,28 @@
+.container {
+  padding-top: var(--space-12);
+}
+
+.title{
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.subtitle{
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.text{
+  font-size: var(--text-lg);
+}
+
+.links{
+  margin-top: var(--space-2);
+  font-size: var(--text-lg);
+  padding-left: var(--space-4);
+
+  li{
+    margin-bottom: var(--space-2);
+  }
+}

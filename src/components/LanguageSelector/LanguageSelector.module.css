@@ -1,0 +1,40 @@
+.langSelector{
+  position: absolute;
+  right: 40px;
+  top: 40px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  box-shadow: var(--shadow-md);
+
+  padding: var(--space-1) var(--space-2);
+
+  > svg{
+    color: var(--grey-900);
+    box-sizing: content-box;
+    border-right: 1px solid var(--color-border);
+    padding: 0 var(--space-2);
+    width: var(--text-base);
+  }
+
+  > button {
+    box-sizing: content-box;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    color: var(--grey-600);
+    &[aria-pressed="true"]{
+      color: var(--grey-800);
+    }
+
+    padding: 0 var(--space-2);
+
+    &:nth-of-type(1){
+      border-right: 1px solid var(--color-border-subtle);
+    }
+  }
+}

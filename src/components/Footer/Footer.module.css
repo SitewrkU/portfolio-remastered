@@ -1,0 +1,17 @@
+.footer{
+  font-size: var(--text-lg);
+
+  .main{
+    display: flex;
+    .links{
+      margin-left: auto;
+    }
+  }
+
+  .version{
+    text-align: center;
+    font-size: var(--text-xl);
+    opacity: 0.5;
+    margin-bottom: var(--space-4);
+  }
+}

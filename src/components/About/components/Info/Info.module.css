@@ -1,0 +1,40 @@
+.info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  font-size: var(--text-lg);
+
+  > p{
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    line-height: 1.5rem;
+    word-spacing: 2px;
+    font-family: "Onest", sans-serif;
+  }
+}
+
+.header{
+  font-family: var(--header-font), serif;
+  color: var(--color-accent);
+  font-size: var(--text-3xl);
+  font-weight: bold;
+  margin-bottom: var(--space-4);
+}
+
+.osuLink{
+  text-decoration: none;
+  color: inherit;
+  animation: osuBlink 4s ease-in-out infinite;
+}
+
+@keyframes osuBlink {
+  0%, 75%, 100% {
+    color: inherit;
+    text-shadow: none;
+  }
+  88% {
+    color: var(--color-border);
+    text-shadow: 0 0 6px color-mix(in srgb, var(--color-border) 40%, transparent);
+  }
+}

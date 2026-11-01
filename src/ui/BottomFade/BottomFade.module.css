@@ -1,0 +1,29 @@
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.bottomFade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to top, black 20%, transparent);
+  -webkit-mask-image: linear-gradient(to top, black 20%, transparent);
+}
+
+.arrow {
+  color: var(--grey-100);
+  position: absolute;
+  bottom: 28px;
+  right: 25px;
+  transform: translateX(-50%);
+  z-index: 30;
+  opacity: 0.5;
+}

@@ -1,0 +1,41 @@
+.header{
+  color: var(--color-accent);
+  font-size: var(--text-3xl);
+  font-weight: bold;
+  margin-bottom: var(--space-4);
+  font-family: var(--header-font), serif;
+}
+
+.techstack{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--main-font), serif;
+  font-size: var(--text-lg);
+}
+
+.group{
+  display: flex;
+  flex-direction: column;
+
+  .groupName{
+    color: var(--color-text);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2);
+  }
+}
+
+.techlist{
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.tech{
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: color-mix(var(--color-border) 50%, transparent 60%);
+}

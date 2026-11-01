@@ -1,0 +1,123 @@
+.container {
+  --banner-height: 220px;
+  isolation: isolate;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: var(--bg-image, none);
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(60px) saturate(1.6) brightness(0.3);
+    scale: 2;
+  }
+
+  .banner {
+    transform: rotate(-3deg);
+    scale: 1.35;
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: var(--banner-height);
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+
+    mask-image: linear-gradient(
+            to bottom,
+            #000 0%,
+            #000 65%,
+            rgb(0 0 0 / 0.6) 82%,
+            transparent 100%
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.15) contrast(1.1) brightness(1.05);
+    }
+  }
+}
+
+.content {
+  position: relative;
+  top: calc(var(--banner-height) - 100px);
+  color: var(--grey-200);
+  padding: 0 var(--space-16) var(--space-16);
+  font-size: var(--text-lg);
+
+  .back{
+    background-color: color-mix(black, transparent 20%);
+    border-radius: 10px;
+    padding: var(--space-1) var(--space-2);
+    text-decoration: none;
+    color: var(--grey-200);
+    opacity: 0.4;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .header{
+    color: var(--grey-50);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-family: var(--header-font), serif;
+  }
+
+  .tags{
+    color: var(--grey-200);
+    opacity: 0.4;
+    display: flex;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8);
+  }
+
+  .section{
+    margin-bottom: var(--space-8);
+
+    h2{
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-2);
+      color: var(--grey-100);
+    }
+
+    p{
+      max-width: 60ch;
+    }
+  }
+
+  .actions{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    gap: var(--space-4);
+
+    &:has(svg:hover) svg:not(:hover) {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+
+    .disabled{
+      svg{
+        opacity: 0.3;
+      }
+    }
+
+    svg{
+      scale: 1.2;
+      color: var(--grey-200);
+
+      transition: transform 0.2s ease, opacity 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

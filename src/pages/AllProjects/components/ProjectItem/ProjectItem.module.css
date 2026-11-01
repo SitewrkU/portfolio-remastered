@@ -1,0 +1,154 @@
+.project {
+  position: relative;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  padding: 10px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 10px;
+  flex: 0 1 350px;
+  max-width: 350px;
+}
+
+.preview{
+  flex-shrink: 0;
+  img{
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #6B9080;
+  }
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .name{
+    color: var(--color-accent);
+    font-family: "Podkova", serif;
+    font-size: var(--text-xl);
+    font-weight: bold;
+    margin-bottom: var(--space-2);
+  }
+
+  .description{
+    max-width: 300px;
+  }
+
+  .techlist{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin: var(--space-4) 0;
+    > p{
+      font-size: 0.9rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: color-mix(var(--color-border) 50%, transparent 60%);
+    }
+  }
+
+
+  .actions{
+    margin-top: auto;
+    display: flex;
+    font-family: "Onest", sans-serif;
+    gap: 10px;
+
+    a{
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 5px;
+      gap: 5px;
+
+      > svg{
+        scale: 0.8;
+      }
+    }
+  }
+}
+
+
+.projectsButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+
+  transition: .2s ease-in-out all;
+  &:hover{
+    background-color: var(--color-accent-soft);
+  }
+
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  &.disabled{
+    cursor: default;
+    background-color: color-mix(color-mix(var(--color-accent) 100%, grey 60%) 100%, transparent 60%);
+  }
+}
+
+.detailsIcon{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  color: var(--grey-100);
+  transition: all .2s ease-in-out;
+  &:hover{
+    scale: 1.1;
+  }
+}
+
+
+.detailsButton {
+  cursor: pointer;
+  z-index: 999;
+  background-color: color-mix(var(--color-bg), transparent 20%);
+  backdrop-filter: blur(2px);
+  color: var(--color-text);
+  padding: var(--space-2);
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition:
+          background-color .25s ease-in-out,
+          opacity .25s ease,
+          transform .25s ease,
+          visibility 0s linear .25s;
+}
+
+.project:hover .detailsButton,
+.project:focus-within .detailsButton {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+
+  &:hover {
+    background-color: color-mix(var(--color-bg), transparent 0%);
+  }
+}

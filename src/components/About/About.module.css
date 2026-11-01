@@ -1,0 +1,5 @@
+.about{
+  margin: var(--space-16) 0 var(--space-16);
+  display: flex;
+  gap: var(--space-16);
+}

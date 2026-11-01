@@ -1,0 +1,19 @@
+{
+  "greeting": "Hi, I'm {{name}}!",
+  "profession": "Web-developer",
+
+  "location": "Ukraine",
+
+  "shortInfo": "Passionate about executing ideas and continually making them better.",
+  "viewProjects": "View Projects",
+
+  "mobile": {
+    "hello": "Hi!",
+    "sorry": "Sorry, but...",
+    "notReady": "This website doesn't fully work on phones (devices with narrow screens) yet.",
+    "soon": "The developer will write mobile styles soon, but for now, here's a little information about me:",
+    "infoTitle": "About me",
+    "iAm": "I'm a {{profession}}.",
+    "from": "From: {{location}}."
+  }
+}

@@ -1,0 +1,18 @@
+.divider{
+  margin: var(--space-8) 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dividerLine{
+  flex: 1;
+  height: 1px;
+  background: var(--color-border-subtle);
+}
+
+.icon{
+  flex-shrink: 0;
+  margin: 0 16px;
+  color: var(--color-border);
+}
