@@ -17,7 +17,7 @@ const LastProjects = () => {
 
       <div className={styles.projects}>
       {firstFourProject.map(project => (
-        <ProjectItem project={project}/>
+        <ProjectItem project={project} key={project.slug}/>
       ))}
       </div>
       

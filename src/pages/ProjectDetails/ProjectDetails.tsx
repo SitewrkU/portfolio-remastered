@@ -37,11 +37,11 @@ const ProjectDetails = () => {
 
   return (
     <div className={styles.container}
-         style={{ '--bg-image': `url(/${project.image})` } as CSSProperties}
+         style={{ '--bg-image': `url(${import.meta.env.BASE_URL}/${project.image})` } as CSSProperties}
     >
 
       <div className={styles.banner}>
-        <img src={`/${project.image}`} alt="project image" />
+        <img src={`${import.meta.env.BASE_URL}/${project.image}`} alt="project image" />
       </div>
 
       <div className={styles.content}>

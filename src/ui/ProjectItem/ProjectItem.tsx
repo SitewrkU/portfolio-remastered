@@ -23,7 +23,7 @@ const ProjectItem = ({project}: ProjectType) => {
 
         <div className={styles.techlist}>
         {project.technologies.map(t => (
-          <p>{t}</p>
+          <p key={t}>{t}</p>
         ))}
         </div>
 

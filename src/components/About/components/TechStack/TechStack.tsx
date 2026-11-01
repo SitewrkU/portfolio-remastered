@@ -14,7 +14,7 @@ const TechStack = () => {
           <p className={styles.groupName}>{group.name}</p>
           <div className={styles.techlist}>
           {group.technologies.map(tech => (
-            <div className={styles.tech}>
+            <div className={styles.tech} key={tech}>
               <p>{tech}</p>
             </div>
           ))}

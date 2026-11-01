@@ -1,12 +1,12 @@
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import './i18n'
 import './variables.css'
 import './index.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>
+  </HashRouter>
 )
