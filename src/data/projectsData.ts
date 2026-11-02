@@ -1,3 +1,5 @@
+export type ProjectCategory = 'main' | 'experiment';
+
 export interface Project {
   slug: string;          // унікальний, не змінюється
   name: string;
@@ -6,6 +8,7 @@ export interface Project {
   code_url: string;
   live_url?: string;
   image: string;
+  category: ProjectCategory;
   details?: Details;
 }
 
@@ -24,10 +27,11 @@ export const projectsData: Project[] = [
   {
     slug: 'rerule34',
     name: 're:rule34',
-    description: 'Кастомний та повністю відкритий клієнт для rule34.',
+    description: 'Кастомний веб-клієнт для імідж-борда: пошук за тегами, фільтри й власний бекенд на Express.',
     technologies: ['React', 'Typescript', 'Express'],
     code_url: 'https://github.com/SitewrkU/rerule34',
     image: 'images/projects/rerule34.png',
+    category: 'main',
     details: {
       year: 2026,
       description: 'Повністю open-source клієнт для Rule34. Не комерційний продукт, а спроба переосмислити існуючий сервіс - зробити його сучаснішим, зручнішим і просто приємнішим у використанні.',
@@ -43,16 +47,18 @@ export const projectsData: Project[] = [
     description: 'Просунутий клікер з системою добування руд.',
     technologies: ['React', 'Typescript', 'Zustand'],
     code_url: 'https://github.com/SitewrkU/OreBreaker-reborn',
-    image: 'images/projects/orebreaker-reborn.png'
+    image: 'images/projects/orebreaker-reborn.png',
+    category: 'main',
   },
   {
     slug: 'portfolio',
     name: 'Portfolio',
-    description: 'Старий варіант мого портфоліо',
+    description: 'Минула версія мого портфоліо',
     technologies: ['React', 'JavaScript'],
     code_url: 'https://github.com/SitewrkU/portfolio',
     live_url: 'https://sitewrku.github.io/portfolio/',
-    image: 'images/projects/portfolio.png'
+    image: 'images/projects/portfolio.png',
+    category: 'experiment',
   },
   {
     slug: 'secretshub',
@@ -60,7 +66,8 @@ export const projectsData: Project[] = [
     description: 'Фул-стак соцмережа щоб ділитися секретами.',
     technologies: ['React', 'Express', 'MongoDB'],
     code_url: 'https://github.com/SitewrkU/SecretsHub',
-    image: 'images/projects/secretshub.png'
+    image: 'images/projects/secretshub.png',
+    category: 'main',
   },
   {
     slug: 'reallifeweb',
@@ -68,7 +75,8 @@ export const projectsData: Project[] = [
     description: 'Жартівливий проєкт який демонструє наше життя як гру.',
     technologies: ['React', 'JavaScript', 'mantine'],
     code_url: 'https://github.com/SitewrkU/RealLifeWeb',
-    image: 'images/projects/reallifeweb.png'
+    image: 'images/projects/reallifeweb.png',
+    category: 'main',
   },
   {
     slug: 'orebreaker',
@@ -77,7 +85,8 @@ export const projectsData: Project[] = [
     technologies: ['HTML', 'CSS', 'JS'],
     code_url: 'https://github.com/SitewrkU/OreBreaker',
     live_url: 'https://sitewrku.github.io/OreBreaker/',
-    image: 'images/projects/orebreaker.png'
+    image: 'images/projects/orebreaker.png',
+    category: 'main'
   },
   {
     slug: 'zynetic',
@@ -86,7 +95,8 @@ export const projectsData: Project[] = [
     technologies: ['HTML', 'CSS'],
     code_url: 'https://github.com/SitewrkU/Zynetic',
     live_url: 'https://sitewrku.github.io/Zynetic/',
-    image: 'images/projects/zynetic.png'
+    image: 'images/projects/zynetic.png',
+    category: 'main',
   },
   {
     slug: 'mayo',
@@ -96,6 +106,7 @@ export const projectsData: Project[] = [
     code_url: 'https://github.com/IvanWuser/Mayo',
     live_url: 'https://ivanwuser.github.io/Mayo/',
     image: 'images/projects/mayo.png',
+    category: 'experiment',
     details: {
       year: 2025,
       description: 'Жартівливий проєкт з видуманою історією про аномалію \'Майонейс\', та записник пропавшого',
@@ -111,7 +122,8 @@ export const projectsData: Project[] = [
     technologies: ['React', 'CSS', 'JavaScript'],
     code_url: 'https://github.com/SitewrkU/ReactPetrovich',
     live_url: 'https://sitewrku.github.io/ReactPetrovich/',
-    image: 'images/projects/fecebak.png'
+    image: 'images/projects/fecebak.png',
+    category: 'main',
   },
   {
     slug: 'fancydark',
@@ -120,7 +132,8 @@ export const projectsData: Project[] = [
     technologies: ['HTML', 'CSS'],
     code_url: 'https://github.com/SitewrkU/ReFancyDark',
     live_url: 'https://sitewrku.github.io/ReFancyDark',
-    image: 'images/projects/fancydark.png'
+    image: 'images/projects/fancydark.png',
+    category: 'main',
   },
   {
     slug: 'petrovich',
@@ -130,6 +143,7 @@ export const projectsData: Project[] = [
     code_url: 'https://github.com/SitewrkU/PetrovichOriginal',
     live_url: 'https://sitewrku.github.io/PetrovichOriginal/',
     image: 'images/projects/petrovich.png',
+    category: 'main',
     details: {
       year: 2023,
       description: 'Один із перших і настайріших моїх проєктів, які збереглися до сьогодні. Якась дуже галіма пародія на facebook. P.S. Дизайн та код, через старість проєкту, жахливі, але добавив для історії',
@@ -137,6 +151,16 @@ export const projectsData: Project[] = [
       takeaways: 'Просто загальний досвід в розробці проєктів (хоч і не дуже коректний, але любий проєкт це досвід)',
       status: 'archived',
     }
+  },
+  {
+    slug: 'poshivak',
+    name: 'Poshivak',
+    description: 'Сайт створений для одного з викладачів.',
+    technologies: ['React'],
+    code_url: 'https://github.com/SitewrkU/poshivakWeb',
+    live_url: 'https://sitewrku.github.io/poshivakWeb/',
+    image: 'images/projects/poshivak.png',
+    category: 'experiment',
   },
 ]
 

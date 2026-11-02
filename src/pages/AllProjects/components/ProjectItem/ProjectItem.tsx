@@ -56,11 +56,9 @@ const ProjectItem = ({project}: ProjectType) => {
       </div>
 
       {project.details && (
-        <Link to={`/projects/${project.slug}`}>
-        <div className={styles.detailsButton}>
+        <Link to={`/projects/${project.slug}`} className={styles.detailsButton}>
           <InformationCircle/>
-          <p>Більше про проєкт</p>
-        </div>
+          <span>Більше про проєкт</span>
         </Link>
       )}
 

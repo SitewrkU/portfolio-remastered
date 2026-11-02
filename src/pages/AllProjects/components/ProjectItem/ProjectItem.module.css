@@ -115,6 +115,7 @@
 
 
 .detailsButton {
+  text-decoration: none;
   cursor: pointer;
   z-index: 999;
   background-color: color-mix(var(--color-bg), transparent 20%);

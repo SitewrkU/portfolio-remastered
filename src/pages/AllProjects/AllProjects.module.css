@@ -34,3 +34,26 @@
     opacity: 1;
   }
 }
+
+
+.section {
+  margin-bottom: var(--space-16);
+
+  .sectionHeader{
+    margin: var(--space-6) 0;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--color-accent-soft);
+  font-family: var(--header-font), serif;
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
