@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 const LastProjects = () => {
 
-  const firstFourProject = projectsData.slice(0, 4);
+  const filteredData = projectsData.filter(p => p.category === 'main');
+  const firstFourProject = filteredData.slice(0, 4);
 
   return (
     <div className={styles.lastProjects}>

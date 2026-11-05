@@ -18,7 +18,7 @@ import PageTransition from "./ui/PageTransition/PageTransition.tsx";
 export const username = 'sitewrku';
 
 // loader settings
-const MIN_LOADING_MS = 800;
+const MIN_LOADING_MS = 500;
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 
@@ -63,13 +63,9 @@ function App() {
         ) : (
           <motion.div
             key="content"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
           >
             <AnimatePresence
               mode="wait"
-              initial={false}
               onExitComplete={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
             >
               <Routes location={location} key={location.pathname}>

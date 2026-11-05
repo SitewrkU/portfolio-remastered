@@ -1,8 +1,10 @@
 import styles from './Info.module.css'
+import {motion} from "framer-motion";
+import {fadeUp} from "../../../../animations.ts";
 
 const Info = () => {
   return (
-    <div className={styles.info}>
+    <motion.div className={styles.info} variants={fadeUp}>
       <div className={styles.header}>
 
         <p>Про мене</p>
@@ -28,7 +30,7 @@ const Info = () => {
       </p>
 
       <p>Поза кодом люблю грати в <a className={styles.osuLink} href="https://youtu.be/7fBpBfsMYIc?si=9i_hpcvua08pBzAj" target="_blank">osu!</a></p>
-    </div>
+    </motion.div>
   );
 };
 
