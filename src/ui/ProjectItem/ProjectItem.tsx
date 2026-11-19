@@ -1,6 +1,6 @@
 import styles from './ProjectItem.module.css'
 import type {Project} from "../../data/projectsData.ts";
-import {LinkSquare2, ArrowRight, MultiplicationSignCircle} from "clicons-react";
+import {LinkSquare2, ArrowRight, MultiplicationSignCircle, Download} from "clicons-react";
 import GithubButton from "../Buttons/GithubButton/GithubButton.tsx";
 import clsx from "clsx";
 import {Tooltip} from "../Tooltip/Tooltip.tsx";
@@ -29,15 +29,15 @@ const ProjectItem = ({project}: ProjectType) => {
 
         <div className={styles.actions}>
           <a
-            className={clsx(styles.projectsButton, !project.live_url && styles.disabled)}
-            href={project.live_url}
+            className={clsx(styles.projectsButton, (!project.live_url && !project.details?.downloadLink) && styles.disabled)}
+            href={project.details?.downloadLink ? project.details?.downloadLink : project.live_url}
             target="_blank">
             {project.live_url ?
               (
                 <><LinkSquare2/> Переглянути <ArrowRight/></>
-              )
-              :
-              (
+              ) : project?.details?.downloadLink ? (
+                <><Download/> Завантажити</>
+              ) : (
                 <Tooltip content={'Цей проєкт треба ставити локально.'}>
                   <span><MultiplicationSignCircle/> Демо немає</span>
                 </Tooltip>
