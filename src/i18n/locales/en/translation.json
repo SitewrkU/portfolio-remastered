@@ -14,6 +14,7 @@
     "soon": "The developer will write mobile styles soon, but for now, here's a little information about me:",
     "infoTitle": "About me",
     "iAm": "I'm a {{profession}}.",
-    "from": "From: {{location}}."
+    "from": "From: {{location}}.",
+    "lastprojects": "My last projects:"
   }
 }
